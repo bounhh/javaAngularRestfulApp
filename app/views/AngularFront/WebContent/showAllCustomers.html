@@ -1,0 +1,71 @@
+<p class="h1"> Notre liste des Clients </p>
+
+<form class="well form-horizontal" id="contact_form"  ng-controller="allcustumerController">
+<div class="form-group">
+  <label class="col-md-4 control-label" >Nom de Client</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input name="name" placeholder="Votre Nom" class="form-control"  type="text" ng-model="costumer.name">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Email</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+		<input name="email" placeholder="Votre Email" class="form-control"  type="text" ng-model="costumer.email">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Societe</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+  <input name="email" placeholder="Votre Email" class="form-control"  type="text" ng-model="costumer.company">
+    </div>
+  </div>
+</div>
+<input id="idcustomer" ng-model="customer.id" type="text" hidden="true"><br/>
+
+<div class="form-group">
+	<div class="col-sm-offset-2 col-sm-10">
+		<button class="btn btn-info" ng-click="" ng-show="editBtn">Modifiez Client</button>		   
+	</div>
+</div>
+
+
+
+
+
+
+Filtrez par Nom: <input type="text" ng-model="query.name" placeholder="Cherchez Customers" class="form-control"/> <br/>
+
+  <div>
+		<table class="table table-bordered">
+			<thead>
+				<th>Name</th>
+				<th>Company</th>
+				<th>Email</th>
+				<th> Action</th>
+			</thead>
+
+			<tbody ng-repeat="costumer in costumers | filter:query"> 
+				<tr>
+					<td>{{costumer.name}}</td>
+					<td>{{costumer.company}}</td>
+					<td>{{costumer.email}}</td>
+					<td>
+						<a class="btn btn-danger" ng-click="deletcustomer(costumer)" >Supprimer</a>
+						<a class="btn btn-info" ng-click="editcustomer(costumer)" >Editer</a>
+						<a class="btn btn-info" >Detaille</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</form>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app ="myapp" class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<script	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="js/app.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Limber RestFul web Application</title>
+</head>
+<body ng-controller="allcustumerController">
+<div class="container">
+<div class="panel panel-default">
+<ul class="topnav" id="myTopnav">
+  <li><a href="#/view1">veiw1</a></li>
+  <li><a href="#/allCustumer">Clients</a></li>
+  <li><a href="#/addClient">ajouter Client</a></li>
+</ul>
+</div>
+<div ng-view></div>
+</div>
+</body>
+</html>

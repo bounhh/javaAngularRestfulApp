@@ -1,0 +1,93 @@
+<div>
+<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+<legend>Ajouter un Client</legend>
+<div class="form-group">
+  <label class="col-md-4 control-label" >Nom de Client</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input name="name" placeholder="Votre Nom" class="form-control"  type="text" ng-model="costumer.name">
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" >Age</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input name="age" placeholder="votre Age" class="form-control"  type="number" ng-model="costumer.age">
+    </div>
+  </div>
+</div>
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Email</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+  <input name="email" placeholder="Votre Email" class="form-control"  type="text" ng-model="costumer.email">
+    </div>
+  </div>
+</div>     
+<div class="form-group">
+  <label class="col-md-4 control-label">Num Telephone</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+  <input name="phone" placeholder="Votre Num de Telephone" class="form-control" type="text" ng-model="costumer.phone">
+    </div>
+  </div>
+</div>  
+<div class="form-group">
+  <label class="col-md-4 control-label">societe</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+  <input name="address" placeholder="Votre Address" class="form-control" type="text" ng-model="costumer.company">
+    </div>
+  </div>
+</div>  
+<div class="form-group">
+  <label class="col-md-4 control-label">Adresse</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+  <input name="address" placeholder="Votre Address" class="form-control" type="text" ng-model="costumer.adress">
+    </div>
+  </div>
+</div>
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Gendre</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="mal" ng-model="costumer.gender"/> Mal
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="femel" ng-model="costumer.gender"/> Femelle
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+<div class="form-group">
+  <label class="col-md-4 control-label">A propos</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+        	<textarea class="form-control" name="description" placeholder="A propos de Vous" ng-model="costumer.about"></textarea>
+</div>
+</div>
+</div>
+<input id ="idclient" type="text" ng-model="costumer.id" hidden="true"><br/>
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-info" ng-click="addcustomer(costumer)" >Valider<span class="glyphicon glyphicon-ok"></span></button>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
